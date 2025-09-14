@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kirana Store - Your Neighborhood Grocery Store</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .btn-gradient {
+            background-image: linear-gradient(to right, #FBBF24, #F59E0B);
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            background-image: linear-gradient(to right, #F59E0B, #D97706);
+            box-shadow: 0 4px 15px 0 rgba(251, 191, 36, 0.75);
+        }
+        .section-divider {
+            border-top: 1px solid #E5E7EB;
+        }
+    </style>
+</head>
+<body class="bg-[#F8F5F2]">
+<div class="bg-[#F8F5F2]">
+<header class="sticky top-0 bg-white shadow-sm z-50">
+<nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-green-600 text-3xl">shopping_basket</span>
+<div>
+<a class="text-xl font-bold text-gray-800" href="index.html">Shree Baldigambar</a>
+<p class="text-xs text-gray-500">General Store</p>
+</div>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-green-600 font-semibold" href="index.html">Home</a>
+<a class="text-gray-600 hover:text-green-600" href="product.html">Products</a>
+<a class="text-gray-600 hover:text-green-600" href="#about">About</a>
+<a class="text-gray-600 hover:text-green-600" href="#contact">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<a class="text-gray-600 hover:text-green-600" href="cart.html">
+<span class="material-symbols-outlined">shopping_cart</span>
+</a>
+<a class="flex items-center text-gray-600 hover:text-green-600" id="loginLink" href="login.html">
+<span class="material-symbols-outlined mr-1">login</span> Login
+                    </a>
+
+                    <div class="relative" id="profileMenu" style="display:none;">
+  <button id="profileIcon" class="flex items-center focus:outline-none">
+    <span class="material-symbols-outlined text-green-600 text-3xl">account_circle</span>
+  </button>
+  <div id="profileDropdown" class="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg hidden">
+    <button id="logoutBtn" class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100">Log Out</button>
+  </div>
+</div> 
+      </div>   
+          
+<div class="md:hidden">
+<button class="text-gray-600 hover:text-green-600 focus:outline-none">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main>
+<section class="container mx-auto px-6 py-16">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<h1 class="text-5xl md:text-6xl font-bold text-gray-800 leading-tight">Your Neighborhood <br/> <span class="text-green-600">Kirana Store</span></h1>
+<p class="text-gray-600 text-lg">Quality packaged groceries, household essentials, and more delivered fresh to your doorstep. Supporting local families for over a decade.</p>
+<div class="flex space-x-4 pt-4">
+<a class="btn-gradient text-white font-bold py-3 px-8 rounded-lg flex items-center" href="product.html">
+<span class="material-symbols-outlined mr-2">shopping_cart</span> Shop Now
+                            </a>
+<a class="bg-white border border-gray-300 text-gray-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition" href="product.html">View Products</a>
+</div>
+</div>
+<div class="relative">
+<img alt="A collage of various packaged grocery items like snacks, sauces, and grains scattered on a surface." class="rounded-3xl shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB4yGNVtuTwoNxdQ0xsLtgEMLKqV5F0bJAtoy0wYRHEeTM_2Y9PjMOHppkTLIdnb4U2HliPvl4w6hDkjS-CGMkfAq_auuk5ft4JLkSkAlfkEcQwfYTWrEHc-m2sf9tGQFaZR9FlVzKxPIkDDYSxg3wT7-uii-59Gj5u96Ekiy7DZpyhczqffa7wW4k38UQwJwN6fC3d8wc3i8Tew47O-8vewJLfYoUvXN0bpoNGRpUNIqr3PhO_DXW3WNxVot9OoQiH-OuEFRQCZTE"/>
+</div>
+</div>
+</section>
+<section class="bg-white py-20">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="text-center">
+<div class="flex justify-center items-center mb-4">
+<div class="bg-green-100 p-4 rounded-full">
+<span class="material-symbols-outlined text-green-600 text-4xl">rocket_launch</span>
+</div>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Quick Service</h3>
+<p class="text-gray-600">Get your essentials in a flash with our efficient checkout process. We value your time.</p>
+</div>
+<div class="text-center">
+<div class="flex justify-center items-center mb-4">
+<div class="bg-green-100 p-4 rounded-full">
+<span class="material-symbols-outlined text-green-600 text-4xl">local_shipping</span>
+</div>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Home Delivery</h3>
+<p class="text-gray-600">Enjoy the convenience of same-day delivery right to your doorstep. Shopping made easy.</p>
+</div>
+<div class="text-center">
+<div class="flex justify-center items-center mb-4">
+<div class="bg-green-100 p-4 rounded-full">
+<span class="material-symbols-outlined text-green-600 text-4xl">verified</span>
+</div>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-2">Quality Products</h3>
+<p class="text-gray-600">We offer a curated selection of fresh and authentic products to meet your daily needs.</p>
+</div>
+<div class="text-center">
+<div class="flex justify-center items-center mb-4">
+<div class="bg-green-100 p-4 rounded-full">
+<span class="material-symbols-outlined text-green-600 text-4xl">inventory_2</span>
+</div>
+</div>
+<h3 class="text-xl font-bold text-gray-800 mb-2">1000+ Products</h3>
+<p class="text-gray-600">Find everything on your list with our extensive range of over a thousand products.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[#F8F5F2]" id="products">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-800">Our Products</h2>
+<p class="text-gray-600 mt-2 max-w-2xl mx-auto">From pantry staples to household necessities, we've got you covered. Explore our curated selection of quality items.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="group text-center">
+<div class="relative overflow-hidden rounded-lg shadow-lg mb-4">
+<img alt="Grains &amp; Pulses" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300" src="assets/grains and pulses.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800">Grains &amp; Pulses</h3>
+</div>
+<div class="group text-center">
+<div class="relative overflow-hidden rounded-lg shadow-lg mb-4">
+<img alt="Snacks &amp; Beverages" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300" src="assets/snacks and breverages.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800">Snacks &amp; Beverages</h3>
+</div>
+<div class="group text-center">
+<div class="relative overflow-hidden rounded-lg shadow-lg mb-4">
+<img alt="Household Essentials" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300" src="assets/Household-Essentials.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800">Household Essentials</h3>
+</div>
+<div class="group text-center">
+<div class="relative overflow-hidden rounded-lg shadow-lg mb-4">
+<img alt="Personal Care" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300" src="assets/personal care.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800">Personal Care</h3>
+</div>
+</div>
+<div class="text-center mt-12">
+<a class="btn-gradient text-white font-bold py-3 px-8 rounded-lg" href="product.html">View All Products</a>
+</div>
+</div>
+</section>
+
+
+<div class="section-divider container mx-auto"></div>
+<section class="py-24 bg-[#F8F5F2]" id="about">
+<div class="container mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<h2 class="text-4xl font-bold text-gray-800 mb-6">About Shree Baldigambar Kirana Store</h2>
+<p class="text-gray-600 text-lg mb-4">Founded over a decade ago, Kirana Store is a family-run shop dedicated to serving our community with high-quality groceries at fair prices. We believe in being more than just a store; we're a part of your daily life.</p>
+<p class="text-gray-600">We take pride in knowing our customers and providing a friendly, reliable service. Thank you for making us your neighborhood choice.</p>
+</div>
+<div class="order-1 md:order-2">
+<img alt="Inside of the Kirana Store" class="rounded-3xl shadow-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-g8v_3f_6s-U2p-K0s-E8v-F7o-L6m-Q0r-D4z-N6l-N6w-T4p-S8n-N0n-J0r-F8l-O8q-D0p-J5n-V3u-V5z-F6n-T3k-V6z-M3q-L0g-O4z-X7y-B3g"/>
+</div>
+</div>
+</div>
+</section>
+<div class="section-divider container mx-auto"></div>
+<section class="py-24 bg-white" id="contact">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-800">Get In Touch</h2>
+<p class="text-gray-600 mt-2 max-w-2xl mx-auto">Have a question or feedback? We'd love to hear from you. Reach out to us through the form or visit us in person.</p>
+</div>
+<div class="grid md:grid-cols-5 gap-12">
+<div class="md:col-span-3 bg-[#F8F5F2] p-8 rounded-lg">
+<form action="#" method="POST">
+<div class="mb-4">
+<label class="block text-gray-700 font-semibold mb-2" for="name">Name</label>
+<input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" id="name" name="name" type="text"/>
+</div>
+<div class="mb-4">
+<label class="block text-gray-700 font-semibold mb-2" for="email">Email</label>
+<input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" id="email" name="email" type="email"/>
+</div>
+<div class="mb-6">
+<label class="block text-gray-700 font-semibold mb-2" for="message">Message</label>
+<textarea class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" id="message" name="message" rows="4"></textarea>
+</div>
+<button class="btn-gradient text-white font-bold py-3 px-8 rounded-lg w-full" type="submit">Send Message</button>
+</form>
+</div>
+<div class="md:col-span-2 space-y-8">
+<div>
+<h4 class="font-semibold text-gray-700 flex items-center mb-2"><span class="material-symbols-outlined mr-3 text-green-600">location_on</span>Address</h4>
+<p class="text-gray-600 pl-9">123 Grocery Lane, Mumbai, IN 400001</p>
+</div>
+<div>
+<h4 class="font-semibold text-gray-700 flex items-center mb-2"><span class="material-symbols-outlined mr-3 text-green-600">call</span>Phone</h4>
+<p class="text-gray-600 pl-9">+91 12345 67890</p>
+</div>
+<div>
+<h4 class="font-semibold text-gray-700 flex items-center mb-2"><span class="material-symbols-outlined mr-3 text-green-600">schedule</span>Opening Hours</h4>
+<p class="text-gray-600 pl-9">Mon - Sat: 9:00 AM - 9:00 PM</p>
+<p class="text-gray-600 pl-9">Sun: 10:00 AM - 7:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<footer class="bg-gray-800 text-white">
+<div class="container mx-auto px-6 py-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h3 class="font-bold text-lg mb-4">Shree Baldigambar</h3>
+<p class="text-gray-400">Your one-stop shop for all daily needs. Fresh, fast, and friendly.</p>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-4">Quick Links</h3>
+<ul>
+<li class="mb-2"><a class="text-gray-400 hover:text-white" href="#about">About Us</a></li>
+<li class="mb-2"><a class="text-gray-400 hover:text-white" href="#contact">Contact</a></li>
+<li class="mb-2"><a class="text-gray-400 hover:text-white" href="#">FAQ</a></li>
+<li class="mb-2"><a class="text-gray-400 hover:text-white" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-4">Contact Us</h3>
+<p class="text-gray-400 flex items-center mb-2"><span class="material-symbols-outlined mr-2">location_on</span> 123 Grocery Lane, Mumbai, IN</p>
+<p class="text-gray-400 flex items-center mb-2"><span class="material-symbols-outlined mr-2">phone</span> +91 12345 67890</p>
+<p class="text-gray-400 flex items-center"><span class="material-symbols-outlined mr-2">email</span> support@kiranastore.com</p>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-4">Follow Us</h3>
+<div class="flex space-x-4">
+<a class="text-gray-400 hover:text-white" href="#"><svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg></a>
+<a class="text-gray-400 hover:text-white" href="#"><svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg></a>
+<a class="text-gray-400 hover:text-white" href="#"><svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 012.153 1.257 4.902 4.902 0 011.257 2.153c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.257 2.153 4.902 4.902 0 01-2.153 1.257c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-2.153-1.257 4.902 4.902 0 01-1.257-2.153c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.257-2.153A4.902 4.902 0 016.08 2.465c.636-.247 1.363.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z" fill-rule="evenodd"></path>
+</svg></a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+<p>© 2024 Shree Baldigambar. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS with your Public Key
+  (function(){
+    emailjs.init("idsU12CsZEN1vJIcI"); // Replace with your EmailJS Public Key
+  })();
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const contactForm = document.querySelector('#contact form');
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Collect form data
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Validate
+    if (!name || !email || !message) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    // Send email via EmailJS
+    emailjs.send("service_ykrz21b", "template_smqz0qm", {
+      from_name: name,
+      from_email: email,
+      message: message
+    })
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+       alert('Thank you, ' + name + '! Your message has been sent.');
+       contactForm.reset();
+    }, function(error) {
+       console.error('FAILED...', error);
+       alert('Oops! Something went wrong. Please try again later.');
+    });
+  });
+});
+</script>
+
+
+<script type="module">
+  // Import Firebase modules
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import {
+    getAuth,
+    onAuthStateChanged,
+    signOut
+  } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+  // Your Firebase configuration (same as login.html)
+  const firebaseConfig = {
+    apiKey:"AIzaSyCzW3juEFHQc--r7M_5FjSun-LOktRTAlg",
+    authDomain: "general-store-website.firebaseapp.com",
+    projectId: "general-store-website",
+    storageBucket: "general-store-website.firebasestorage.app",
+    messagingSenderId: "385213164157",
+    appId: "1:385213164157:web:178224f78178b3a15c1f14"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // DOM elements for profile menu
+  const profileMenu = document.getElementById('profileMenu');
+  const profileIcon = document.getElementById('profileIcon');
+  const profileDropdown = document.getElementById('profileDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+
+  // Toggle dropdown when clicking the icon
+  profileIcon?.addEventListener('click', () => {
+    profileDropdown.classList.toggle('hidden');
+  });
+
+  // Logout button
+  logoutBtn?.addEventListener('click', () => {
+    signOut(auth).then(() => {
+      alert('You have logged out.');
+      window.location.href = 'login.html';
+    });
+  });
+
+  onAuthStateChanged(auth, (user) => {
+  const profileMenu = document.querySelector('#profileMenu');
+  const loginLink = document.querySelector('a[href="login.html"]');
+
+  if (user) {
+    profileMenu.style.display = 'block';
+    if (loginLink) loginLink.style.visibility = 'hidden';
+  } else {
+    profileMenu.style.display = 'none';
+    if (loginLink) loginLink.style.visibility = 'visible';
+  }
+});
+
+
+
+
+</script>
+
+
+
+</body></html>

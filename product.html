@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kirana Store - Products</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .btn-gradient {
+            background-image: linear-gradient(to right, #FBBF24, #F59E0B);
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            background-image: linear-gradient(to right, #F59E0B, #D97706);
+            box-shadow: 0 4px 15px 0 rgba(251, 191, 36, 0.75);
+        }
+    </style>
+</head>
+<body class="bg-[#F8F5F2]">
+<div class="bg-[#F8F5F2]">
+<header class="sticky top-0 bg-white shadow-sm z-50">
+<nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-green-600 text-3xl">shopping_basket</span>
+<div>
+<a class="text-xl font-bold text-gray-800" href="index.html">Shree Baldigambar</a>
+<p class="text-xs text-gray-500">General Store</p>
+</div>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-gray-600 hover:text-green-600" href="index.html">Home</a>
+<a class="text-green-600 font-semibold" href="#">Products</a>
+<a class="text-gray-600 hover:text-green-600" href="index.html#about">About</a>
+<a class="text-gray-600 hover:text-green-600" href="index.html#contact">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<a class="relative text-gray-600 hover:text-green-600" href="cart.html" id="cartLink" aria-label="Cart">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span id="cartCount" class="cart-badge inline-flex items-center justify-center h-5 w-5 rounded-full bg-red-600 text-white text-xs">0</span>
+</a>
+<a class="flex items-center text-gray-600 hover:text-green-600" href="login.html" id="loginLink">
+<span class="material-symbols-outlined mr-1">login</span> Login
+                    </a>
+
+                    <div class="relative" id="profileMenu" style="display:none;">
+  <button id="profileIcon" class="flex items-center focus:outline-none">
+    <span class="material-symbols-outlined text-green-600 text-3xl">account_circle</span>
+  </button>
+  <div id="profileDropdown" class="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg hidden">
+    <button id="logoutBtn" class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100">Log Out</button>
+  </div>
+</div>
+</div>
+<div class="md:hidden">
+<button class="text-gray-600 hover:text-green-600 focus:outline-none">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="container mx-auto px-6 py-12">
+<div class="mb-8 text-center">
+<h1 class="text-4xl font-bold text-gray-800">Our Products</h1>
+</div>
+
+ <div class="space-y-16">
+<section>
+<h2 class="text-3xl font-bold text-gray-800 mb-6">Staples</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Fortune Chakki Fresh Atta" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image1.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Fortune Chakki Fresh Atta</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹185</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center " data-id="p1" 
+    data-name="Fortune Chakki Fresh Atta" 
+    data-price="185"
+    data-image="assets/image1.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Tata Sampann Toor Dal" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image2.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Tata Sampann Toor Dal</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹120</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center" data-id="p2" 
+    data-name="Tata Sampann Toor Dal" 
+    data-price="120"
+    data-image="assets/image2.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="India Gate Basmati Rice" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image3.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">India Gate Basmati Rice</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹250</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center"  data-id="p3" 
+    data-name="India Gate Basmati Rice" 
+    data-price="250"
+    data-image="assets/image3.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Fortune Sunlite Refined Sunflower Oil" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image4.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Fortune Sunlite Refined Oil</h3>
+<p class="text-xl font-bol d text-green-600 mb-4">₹210</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center"  data-id="p4" 
+    data-name="Fortune Sunlite Refined Oil" 
+    data-price="210"
+    data-image="assets/image4.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-3xl font-bold text-gray-800 mb-6">Packaged Food</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Britannia Good Day Cashew Cookies" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image5.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Britannia Good Day Cookies</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹40</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center" data-id="p5"
+data-name="Britannia Good Day Cookies"
+data-price="40"
+data-image="assets/image5.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Maggi 2-Minute Noodles Masala" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image6.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Maggi 2-Minute Noodles</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹12</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center" data-id="p6" 
+  data-name="Maggi 2-Minute Noodles" 
+  data-price="12"
+  data-image="assets/image6.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Lays Classic Salted Potato Chips" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image7.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Lays Classic Salted Chips</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹20</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center" data-id="p7"
+data-price="20"
+data-name="Lays Classic Salted Chips"
+data-image="assets/image7.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Kissan Fresh Tomato Ketchup" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image8.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Kissan Tomato Ketchup</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹115</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center" data-id="p8" data-name="Kissan Tomato Ketchup" data-price="115" data-image="assets/image8.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-3xl font-bold text-gray-800 mb-6">Household Essentials</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col" >
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Surf Excel Easy Wash Detergent Powder" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image9.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Surf Excel Detergent Powder</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹220</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center" data-id="p9" data-name="Surf Excel Detergent Powder" data-price="220" data-image="assets/image9.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Lizol Disinfectant Surface Cleaner" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image10.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Lizol Surface Cleaner</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹98</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center" data-id="p10" data-name="Lizpol Surface Cleaner" data-price="98" data-image="assets/image10.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Harpic Disinfectant Toilet Cleaner" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image11.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Harpic Toilet Cleaner</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹86</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center" data-id="p11" data-name="Harpic Toilet Cleaner" data-price="86" data-image="assets/image11.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Colgate MaxFresh Toothpaste" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image12.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Colgate MaxFresh Toothpaste</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹90</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center" data-id="p12" data-price="90" data-name="Colgate MaxFresh Toothpaste" data-image="assets/image12.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-3xl font-bold text-gray-800 mb-6">Beverages</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Tata Tea Gold" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image13.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Tata Tea Gold</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹485</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center" data-id="p13" data-name="Tata Tea Gold" data-price="485" data-image="assets/image13.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Nescafe Classic Coffee" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image14.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Nescafe Classic Coffee</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹280</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center" data-id="p14" data-name="Nescafe Classic Coffee" data-price="280" data-image="assets/image14.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Tropicana 100% Orange Juice" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image15.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Tropicana Orange Juice</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹130</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center" data-id="p15" data-name="Tropicana Orange Juice" data-price="130" data-image="assets/image15.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+<div class="bg-white rounded-lg shadow-md p-4 group hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative overflow-hidden rounded-lg mb-4 flex-grow">
+<img alt="Coca-Cola Soft Drink" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300" src="assets/image16.jpg"/>
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Coca-Cola Soft Drink</h3>
+<p class="text-xl font-bold text-green-600 mb-4">₹40</p>
+<button class="add-to-cart w-full btn-gradient text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center" data-id="p16" data-name="cola-cola soft drink" data-price="40" data-image="assets/image16.jpg">
+<span class="material-symbols-outlined mr-2">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<footer class="bg-gray-800 text-white mt-16">
+<div class="container mx-auto px-6 py-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h3 class="font-bold text-lg mb-4">Kirana Store</h3>
+<p class="text-gray-400">Your one-stop shop for all daily needs. Fresh, fast, and friendly.</p>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-4">Quick Links</h3>
+<ul>
+<li class="mb-2"><a class="text-gray-400 hover:text-white" href="index.html#about">About Us</a></li>
+<li class="mb-2"><a class="text-gray-400 hover:text-white" href="index.html#contact">Contact</a></li>
+<li class="mb-2"><a class="text-gray-400 hover:text-white" href="#">FAQ</a></li>
+<li class="mb-2"><a class="text-gray-400 hover:text-white" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-4">Contact Us</h3>
+<p class="text-gray-400 flex items-center mb-2"><span class="material-symbols-outlined mr-2">location_on</span> 123 Grocery Lane, Mumbai, IN</p>
+<p class="text-gray-400 flex items-center mb-2"><span class="material-symbols-outlined mr-2">phone</span> +91 12345 67890</p>
+<p class="text-gray-400 flex items-center"><span class="material-symbols-outlined mr-2">email</span> support@kiranastore.com</p>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-4">Follow Us</h3>
+<div class="flex space-x-4">
+<a class="text-gray-400 hover:text-white" href="#"><svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg></a>
+<a class="text-gray-400 hover:text-white" href="#"><svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg></a>
+<a class="text-gray-400 hover:text-white" href="#"><svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 012.153 1.257 4.902 4.902 0 011.257 2.153c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.257 2.153 4.902 4.902 0 01-2.153 1.257c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-2.153-1.257 4.902 4.902 0 01-1.257-2.153c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.257-2.153A4.902 4.902 0 016.08 2.465c.636-.247 1.363.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z" fill-rule="evenodd"></path>
+</svg></a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+<p>© 2025 Shree Baldigambar. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+
+
+
+
+
+<script type="module">
+  // Import Firebase modules
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import {
+    getAuth,
+    onAuthStateChanged,
+    signOut
+  } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+  // Your Firebase configuration (same as login.html)
+  const firebaseConfig = {
+    apiKey:"AIzaSyCzW3juEFHQc--r7M_5FjSun-LOktRTAlg",
+    authDomain: "general-store-website.firebaseapp.com",
+    projectId: "general-store-website",
+    storageBucket: "general-store-website.firebasestorage.app",
+    messagingSenderId: "385213164157",
+    appId: "1:385213164157:web:178224f78178b3a15c1f14"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // DOM elements for profile menu
+  const profileMenu = document.getElementById('profileMenu');
+  const profileIcon = document.getElementById('profileIcon');
+  const profileDropdown = document.getElementById('profileDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+
+  // Toggle dropdown when clicking the icon
+  profileIcon?.addEventListener('click', () => {
+    profileDropdown.classList.toggle('hidden');
+  });
+
+  // Logout button
+  logoutBtn?.addEventListener('click', () => {
+    signOut(auth).then(() => {
+      alert('You have logged out.');
+      window.location.href = 'login.html';
+    });
+  });
+
+  onAuthStateChanged(auth, (user) => {
+  const profileMenu = document.querySelector('#profileMenu');
+  const loginLink = document.querySelector('a[href="login.html"]');
+
+  if (user) {
+    profileMenu.style.display = 'block';
+    if (loginLink) loginLink.style.visibility = 'hidden';
+  } else {
+    profileMenu.style.display = 'none';
+    if (loginLink) loginLink.style.visibility = 'visible';
+  }
+});
+
+ onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      // Not logged in → send to login page
+      window.location.href = "login.html";  
+    } else {
+      console.log('User logged in:', user.email);
+      // You can safely run your cart/product rendering code here
+    }
+  });
+
+
+
+
+
+
+const CART_KEY = 'kiranastore_cart_v1';
+
+// Load cart from localStorage
+function loadCart() {
+  try {
+    return JSON.parse(localStorage.getItem(CART_KEY) || '[]');
+  } catch (e) { 
+    return [];
+  }
+}
+
+// Save cart
+function saveCart(cart) {
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+}
+
+// Update cart badge
+function updateCartBadge() {
+  const cartCountEl = document.getElementById('cartCount');
+  const cart = loadCart();
+  const count = cart.reduce((sum, item) => sum + item.qty, 0);
+  if (cartCountEl) cartCountEl.textContent = count;
+}
+
+// Add to cart handler
+function addToCart(product) {
+  const cart = loadCart();
+  const existing = cart.find(item => item.id === product.id);
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    cart.push({...product, qty: 1});
+  }
+  saveCart(cart);
+  updateCartBadge();
+}
+
+// Setup event listeners
+document.addEventListener('DOMContentLoaded', () => {
+  updateCartBadge();
+
+  // Attach click handler to all Add-to-Cart buttons
+  document.querySelectorAll('.add-to-cart').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.id;
+      const name = btn.dataset.name;
+      const price = parseFloat(btn.dataset.price);
+       const image = btn.dataset.image; 
+      addToCart({id, name, price,image});
+      alert(`${name} added to cart!`);
+    });
+  });
+});
+
+
+
+
+</script>
+
+
+</body></html>
